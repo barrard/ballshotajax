@@ -1,5 +1,5 @@
 <?php
-$db = new mysqli("localhost", "root", "portland", "TeamBall");
+$db = new mysqli("localhost", "root", "portlnd", "TeamBall");
 if ($db->connect_errno) {
     echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
 }
