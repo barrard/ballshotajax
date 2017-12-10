@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
     <link rel="stylesheet" href="css/app.css" />
-    <script src="/js/vendor/modernizr.js"></script>
-    <script src="/js/vendor/fastclick.js"></script>
+
   
 
 

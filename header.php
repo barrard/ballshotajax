@@ -56,11 +56,11 @@
   <?php if ($loggedin) { ?>
        <div id='NEWTEST'></div>
     <div class="alert button full"> 
-      <a href="http://localhost/ballshotAJAX/?page=logout">Logout</a>
+      <a href="/teamball/?page=logout">Logout</a>
     </div>
   <?php }else{ ?>
   <div class="button success full">
-    <a class="full" href="http://localhost/ballshotAJAX/?page=login">Login</a>
+    <a class="full" href="/teamball/?page=login">Login</a>
   </div>
   <?php } ?>
 </div>

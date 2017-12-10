@@ -565,7 +565,9 @@ function getHomeTeamEvents(){
 	xhr.onreadystatechange =  function(){
 			if (xhr.readyState==4&&xhr.status==200) {
 				var homeTeamEvents=document.getElementById('homeTeamEvents');
-				homeTeamEvents.innerHTML = xhr.responseText;
+				if(homeTeamEvents!=null){
+					homeTeamEvents.innerHTML = xhr.responseText;
+				}
 				
 			};
 		}
@@ -747,9 +749,13 @@ pauseClockBtn=window.document.getElementById('pauseClockBtn');
 startGameBtn=window.document.getElementById('startGameBtn');
 
 
-	// document.addEventListener('mousemove', showCoords, false);		
-	court.addEventListener('click', hi, false);
+	// document.addEventListener('mousemove', showCoords, false);	
+	if(court != null){
+		court.addEventListener('click', hi, false);
+
+	}	
 	// startGameBtn.addEventListener('click', getHomeTeamList, false);
+	if(minusMinuteBtn != null){	
 	  minusMinuteBtn.addEventListener('click', minusMinute, false);
 	  plusMinuteBtn.addEventListener('click', plusMinute, false);
 	  minusSecondBtn.addEventListener('click', minusSecond, false);
@@ -759,5 +765,6 @@ startGameBtn=window.document.getElementById('startGameBtn');
 	  // stopClockBtn.addEventListener('click', stopClock, false);
 	  // pauseClockBtn.addEventListener('click', pauseClock, false);
 	  fastForwardClockBtn.addEventListener('click', fastForwardClock, false);
+	}
 	
 	
