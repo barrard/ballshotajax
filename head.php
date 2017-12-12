@@ -1,5 +1,10 @@
 <?php include 'connection/session.php' ?>
 <?php include 'connection/database.php' ?>
+<?php session_start(); ?>
+
+
+
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>

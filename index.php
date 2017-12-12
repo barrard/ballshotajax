@@ -1,5 +1,11 @@
 <?php include 'head.php'; ?>
 <?php include 'header.php'; ?>
+<?php   if(isset($_SESSION['teamId'])){  
+    echo "<input id='teamId' type='hidden' name='teamId' value='".$_SESSION['teamId']."'>";
+  }else{
+    echo "<input id='teamId' type='hidden' name='teamId'>";
+
+} ?>
 <?php if (isset($_GET['page'])) {
 	if ($_GET['page']=='logout') {	
 		include 'logout.php';
@@ -9,12 +15,12 @@
 <div class=''>
   <div id='getStatsFromDB'></div>
   <div id='resumeGame'>resumeGame</div>
-<?php echo 'teamName =  <span id="teamName">'.$_SESSION['teamName'].'</span><br>'; ?>
-<?php echo 'teamId =  <span id="teamId">'.$_SESSION['teamId'].'</span><br>'; ?>
-<?php echo 'opponentName = <span id="opponentName">'.$_SESSION['opponentName'].'</span><br>'; ?>
-<?php echo 'opponentId =  <span id="opponentId">'.$_SESSION['opponentId'].'</span><br>'; ?>
-<?php echo 'gameId =  <span id="gameId">'.$_SESSION['gameId'].'</span><br>'; ?>
-<?php print_r($_SESSION); ?>
+<?php //echo 'teamName =  <span id="teamName">'.$_SESSION['teamName'].'</span><br>'; ?>
+<?php //echo 'teamId =  <span id="teamId">'.$_SESSION['teamId'].'</span><br>'; ?>
+<?php //echo 'opponentName = <span id="opponentName">'.$_SESSION['opponentName'].'</span><br>'; ?>
+<?php //echo 'opponentId =  <span id="opponentId">'.$_SESSION['opponentId'].'</span><br>'; ?>
+<?php //echo 'gameId =  <span id="gameId">'.$_SESSION['gameId'].'</span><br>'; ?>
+<?php //print_r($_SESSION); ?>
 </div>
 
 

@@ -114,10 +114,10 @@ hi
  <?php
 //  include 'connection/database.php';
 // global $db;
-// $sql = "SELECT * FROM teams WHERE teamName = '$_SESSION[teamName]'";
-// $rsd = mysqli_query($db, $sql) or trigger_error(mysqli_error($db)." in ".$sql);
-// while($row = mysqli_fetch_assoc($rsd)) { 
-// $teamId=$row['teamId'];
+$sql = "SELECT * FROM teams WHERE teamName = '$_SESSION[teamName]'";
+$rsd = mysqli_query($db, $sql) or trigger_error(mysqli_error($db)." in ".$sql);
+while($row = mysqli_fetch_assoc($rsd)) { 
+$teamId=$row['teamId'];
 //  } ?>
 
 		<input id='shotId'type="text" name='shotId' value=''>
@@ -127,7 +127,6 @@ hi
 		<input id='player'type="text" name='player' value=''>
 		<input id='foundIcon'type="text" name='foundIcon' value=''>
 		<input id='iconColor'type="text" name='iconColor' value=''>
-		<!--<input id='teamId' type="hidden" name='teamId' value='<?php //echo $_SESSION['teamId']; ?>'>-->
 
 		<button class='hidden'onClick='javascript:sendStats();'id='submitEvent'name='eventSubmit'>Submit</button>
 

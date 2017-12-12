@@ -8,7 +8,7 @@ if ((!empty($_GET['homeTeamId'])) &&(!empty($_GET['visitorTeamId']))) {
 	AND 
 	(visitorTeamId='$_GET[homeTeamId]' OR visitorTeamId='$_GET[visitorTeamId]') order by id DESC";
 // $sql ="SELECT * FROM game WHERE homeTeamId and visitorTeamId ='$_GET[homeTeamId]' xor '$_GET[visitorTeamId]'";
-$rsd = mysqli_query($db, $sql)or trigger_error(mysqli_error($db)." in ".$sql);
+$rsd = mysqli_query($db, $sql); //or trigger_error(mysqli_error($db)." in ".$sql);
 if (mysqli_num_rows($rsd)==0) {
 	echo "<h5>No games played yet between ".$_GET['homeTeamId']." and ".$_GET['visitorTeamId']."</h5>";
 }else{

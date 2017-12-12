@@ -41,9 +41,9 @@ function getGameHistory(){
 }
 
 function getStatsFromDB(){
+	console.log('getStatsFromDB()');
 	var teamId = document.getElementById('teamId').innerHTML;
 	var gameId = document.getElementById('gameId').innerHTML;
-	console.log('getStatsFromDB()');
 	var xhr = new XMLHttpRequest();
 	var url = 'getStatsFromDB.php?teamId='+teamId+'&gameId='+gameId;
 
@@ -141,12 +141,13 @@ function getHomeTeamList(){
 	var xhr = new XMLHttpRequest();
 	var url = 'getHomeTeam.php';
 	var teamId = document.getElementById('teamId').innerHTML;
-	var visitorName = document.getElementById('opponentName').innerHTML;
+	var visitorName = document.getElementById('visitorName').innerHTML;
 	console.log(teamId+' '+visitorName);
 	var query = "?teamId="+teamId;
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState == 4 && xhr.status==200){
 			var returnData=xhr.responseText;
+			console.log(returnData)
 			document.getElementById('homeTeamList').innerHTML=returnData;
 		}
 	}

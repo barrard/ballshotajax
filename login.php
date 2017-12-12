@@ -9,6 +9,8 @@
 	    }
 		else if ($user['password'] != $password){
 		  echo("Incorrect username password combo <a href='?page=login'>&larr; Back</a>");
+		  // header('Location: www.google.com');
+
 	    }else{
 		  $_SESSION['teamName'] = $teamName;
 		  $sql = "SELECT * FROM teams WHERE teamName = '$teamName'";
@@ -17,8 +19,9 @@
 	        $_SESSION['teamId']= $row['teamId'];
 		  }
 
-	header('Location: http://localhost/ballshotAJAX/');
-	 }}}?>
+
+		  // exit(header('Location: /teamball'));
+		}}}?>
 
 
 <h1>Login</h1>

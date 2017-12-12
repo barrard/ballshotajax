@@ -6,7 +6,7 @@ $teamId = $_GET['teamId'];
 $gameId = $_GET['gameId'];
 $sql = "SELECT * FROM playerStats where teamId ='$teamId' and gameId='$gameId' order by Id";
 //echo $sql;
-$rsd = mysqli_query($db, $sql) or trigger_error(mysqli_error($db)." in ".$sql);
+$rsd = mysqli_query($db, $sql);
 
 
 $shotType='';
